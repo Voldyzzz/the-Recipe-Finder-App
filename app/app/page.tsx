@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   const router = useRouter();
-  const query = watch("query"); // следим за значением query
+  const query = watch("query");
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
@@ -73,7 +73,7 @@ export default function Home() {
 
         <button
           type="submit"
-          disabled={!query.trim()} // кнопка отключена, если query пуст
+          disabled={!query.trim()}
           className={`py-2 px-5 rounded-lg font-semibold transition-all shadow-lg ${
             query.trim()
               ? "bg-blue-600 text-white hover:bg-blue-700"

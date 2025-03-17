@@ -7,7 +7,6 @@ const API = {
   RECIPE: "https://api.spoonacular.com/recipes/",
   API_KEY: "apiKey=3502a80bdf444d3fab24bfddeb9d41cc",
 };
-// query={query}&cuisine={cuisine}&maxReadyTime={maxReadyTime}
 
 export const getRecipes = async ({ query, cuisine, maxTime }: Inputs) => {
   const URL = `${API.RECIPES}query=${query}&cuisine=${cuisine}&maxReadyTime=${maxTime}&${API.API_KEY}`;
